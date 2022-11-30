@@ -1,5 +1,9 @@
 function Resultado(){
-    let valor1 = document.getElementById('n1').value
+    let idade = document.getElementById('idade').value
 
-    document.getElementById('resposta').innerHTML = getDay()
+    if(idade < 17){
+        document.getElementById('resposta').innerHTML = 'Menor de idade'
+    }else{
+        document.getElementById('resposta').innerHTML = 'Maior de idade'
+    }
 }
