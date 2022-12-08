@@ -1,26 +1,44 @@
-function exibir(){
-     var num1 = Number(document.getElementById("numero1").value);
-     var num2 = Number(document.getElementById("numero2").value);
-     var num3= Number(document.getElementById("numero3").value);
+function Decrescente() {
 
-     var aux = num1;
+    let n1 = document.getElementById('n1').value
+    let n2 = document.getElementById('n2').value
+    let n3 = document.getElementById('n3').value
 
-     if(num2 > num1){
-      aux=num2;
-      num2=num1;
-      num1=aux;
-     }
 
-     if(num3 > num1){
-      aux=num3;
-      num3=num1;
-      num1=aux;
-     }
 
-     if(num3 > num2){
-      aux=num3;
-      num3=num2;
-      num2=aux;
-     }
-     alert(num1+"-"+num2+"-"+num3);
+    if (n1 > n2 && n1 > n3 && n3 > n2) {
+
+        document.getElementById('ordem').innerHTML = n1 + ' ' + n3 + ' ' + n2
+
     }
+
+    else if (n1 > n2 && n1 > n3 && n2 > n3) {
+
+        document.getElementById('ordem').innerHTML = n1 + ' ' + n2 + ' ' + n3
+
+    }
+
+    else if (n2 > n1 && n2 > n3 && n3 > n1) {
+
+        document.getElementById('ordem').innerHTML = n2 + ' ' + n3 + ' ' + n1
+
+    }
+    else if(n2 > n1 && n2 > n3 && n1 > n3){
+
+        document.getElementById('ordem').innerHTML = n2 + ' ' + n1 + ' ' + n3
+
+    }
+
+    else if(n3 > n1 && n3 > n2 && n2 > n1){
+
+        document.getElementById('ordem').innerHTML = n3 + ' ' + n2 + ' ' + n1
+
+    }
+
+    else if(n3 > n1 && n3 > n2 && n1 > n2){
+
+        document.getElementById('ordem').innerHTML = n3 + ' ' + n1 + ' ' + n2
+
+    }
+
+}

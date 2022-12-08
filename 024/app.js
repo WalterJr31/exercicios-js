@@ -1,31 +1,25 @@
-function maior(){
+function Menor() {
 
-var num1 = parseFloat(document.getElementById("numero1").value);
-       var num2 = parseFloat(document.getElementById("numero2").value);
-       var num3 = parseFloat(document.getElementById("numero3").value);
+  let n1 = document.getElementById('n1').value
+  let n2 = document.getElementById('n2').value
+  let n3 = document.getElementById('n3').value
 
-       var maior = num1;
+  if (n1 < n2 && n1 < n3) {
 
-       if(num2 > maior)
-        maior = num2;
-       if(num3 > maior)
-        maior = num3;
+    document.getElementById('mostrar').innerHTML = 'O Menor Preço é ' + n1
 
-       alert("Maior: "+maior);
-     }
+  }
 
+  else if (n2 < n1 && n2 < n3) {
 
-  function menor(){
-       var num1 = parseFloat(document.getElementById("numero1").value);
-       var num2 = parseFloat(document.getElementById("numero2").value);
-       var num3 = parseFloat(document.getElementById("numero3").value);
+    document.getElementById('mostrar').innerHTML = 'O Menor Preço é ' + n2
 
-       var menor = num1;
+  }
 
-       if(num2 < menor)
-        menor = num2;
-       if(num3 < menor)
-        menor = num3;
+  else if (n3 < n1 && n3 < n2) {
 
-       alert("Menor: "+menor);
-      }
+    document.getElementById('mostrar').innerHTML = 'O Menor Preço é ' + n3
+
+  }
+
+}
